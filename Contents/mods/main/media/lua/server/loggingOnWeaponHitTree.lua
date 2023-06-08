@@ -57,7 +57,8 @@ function loggingOnWeapon.hit(owner, weapon)
                 end
             end
         end
-
+        
+        if not tree then print("no tree found - assumed felled?") end
         --add extra drops here
         --square:AddWorldInventoryItem("Base.Log", 0, 0, 0)
     end
