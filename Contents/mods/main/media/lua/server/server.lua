@@ -4,6 +4,9 @@ require "XpSystem/XpUpdate"
 
 -- when you or a npc try to hit a tree
 function xpUpdate.OnWeaponHitTree(owner, weapon)
+
+    print("OnWeaponHitTree: weapon: "..tostring(weapon))
+
     if weapon and weapon:getType() ~= "BareHands" then
         owner:getXp():AddXP(Perks.Strength, 2)
     end
@@ -14,7 +17,7 @@ Events.OnWeaponHitTree.Add(xpUpdate.OnWeaponHitTree)
 -- when you or a npc try to hit something
 function xpUpdate.onWeaponHitXp(owner, weapon, hitObject, damage)
 
-    print("hitObject: "..tostring(hitObject))
+    print("onWeaponHitXp: hitObject: "..tostring(hitObject))
     
     local isShove = false
     if hitObject:isOnFloor() == false and weapon:getType() == "BareHands" then
