@@ -28,7 +28,6 @@ end
 ---@param owner IsoGameCharacter|IsoPlayer|IsoMovingObject
 ---@param weapon HandWeapon|InventoryItem
 function loggingOnWeapon.hit(owner, weapon)
-    print("OnWeaponHitTree: weapon: "..tostring(weapon))
 
     if weapon:getScriptItem():getCategories():contains("Axe") then
         owner:getXp():AddXP(Perks.Logging, 2.5)
@@ -57,8 +56,10 @@ function loggingOnWeapon.hit(owner, weapon)
                 end
             end
         end
-        
-        if not tree then print("no tree found - assumed felled?") end
+
+        if not tree then
+            print("no tree found - assumed felled?")
+        end
         --add extra drops here
         --square:AddWorldInventoryItem("Base.Log", 0, 0, 0)
     end
