@@ -3,22 +3,16 @@ require "XpSystem/XpUpdate"
 --LuaEventManager.triggerEvent("OnWeaponHitTree", var1, var2)
 
 -- when you or a npc try to hit a tree
-function xpUpdate.OnWeaponHitTree(owner, weapon)
-
+function OnWeaponHitTree(owner, weapon)
     print("OnWeaponHitTree: weapon: "..tostring(weapon))
 
-    if weapon and weapon:getType() ~= "BareHands" then
-        owner:getXp():AddXP(Perks.Strength, 2)
-    end
 end
-Events.OnWeaponHitTree.Add(xpUpdate.OnWeaponHitTree)
-
+Events.OnWeaponHitTree.Add(OnWeaponHitTree)
 
 -- when you or a npc try to hit something
-function xpUpdate.onWeaponHitXp(owner, weapon, hitObject, damage)
-
+function onWeaponHitXp(owner, weapon, hitObject, damage)
     print("onWeaponHitXp: hitObject: "..tostring(hitObject))
-    
+    --[[
     local isShove = false
     if hitObject:isOnFloor() == false and weapon:getType() == "BareHands" then
         isShove = true
@@ -73,6 +67,7 @@ function xpUpdate.onWeaponHitXp(owner, weapon, hitObject, damage)
             owner:getXp():AddXP(Perks.SmallBlunt, exp)
         end
     end
+    ]]--
 end
 
-Events.OnWeaponHitXp.Add(xpUpdate.onWeaponHitXp)
+Events.OnWeaponHitXp.Add(onWeaponHitXp)
