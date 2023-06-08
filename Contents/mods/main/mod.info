@@ -1,6 +1,6 @@
-id=ChuckTemplate
-name=ChuckTemplate
-description= 
+id=loggingChucked
+name=Logging Chucked
+description=Adds logging skill. Commissioned by Atomic Duck.
 poster=poster.png
 require=ProjectMMOboid
 tags=Build 41
