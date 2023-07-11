@@ -58,7 +58,9 @@ function loggingOnWeapon.hit(owner, weapon)
         end
 
         if not tree then
-            if getDebug() then print("no tree found after onTreeHit - assumed felled?") end
+            square:AddWorldInventoryItem("loggingChucked.TreeBark", 0, 0, 0)
+            square:AddWorldInventoryItem("loggingChucked.JarSap", 0, 0, 0)
+            --if getDebug() then print("no tree found after onTreeHit - assumed felled?") end
         end
         --add extra drops here
         --square:AddWorldInventoryItem("Base.Log", 0, 0, 0)

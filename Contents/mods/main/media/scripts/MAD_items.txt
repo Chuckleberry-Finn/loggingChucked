@@ -1,0 +1,26 @@
+module loggingChucked
+{
+    imports { Base }
+
+/* EDIBLE */
+
+    item JarSap
+    {
+        DisplayCategory  = 	Junk,
+        Weight			 =	0.01,
+        Type			 =	Normal,
+        DisplayName		 =	Jar of Tree Sap,
+        Icon			 =	JarSap,
+        WorldStaticModel =  JarSap,
+    }
+
+    item TreeBark
+    {
+        DisplayCategory  = 	Junk,
+        Weight			 =	0.01,
+        Type			 =	Normal,
+        DisplayName		 =	TreeBark,
+        Icon			 =	TreeBark,
+        WorldStaticModel =  TreeBark,
+    }	
+}
