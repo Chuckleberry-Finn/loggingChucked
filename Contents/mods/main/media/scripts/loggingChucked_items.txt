@@ -2,7 +2,7 @@ module loggingChucked
 {
     imports { Base }
 
-/* EDIBLE */
+/* EDIBLE - Credit to Skizot */
 
     item JarSap
     {
