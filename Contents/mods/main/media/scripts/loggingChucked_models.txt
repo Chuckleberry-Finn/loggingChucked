@@ -4,14 +4,14 @@ module Base
 
 	model JarSap
 	{
-		mesh = MADItems|JarSap,
+		mesh = loggingChucked_ItemModels|JarSap,
 		texture = loggingChucked_ItemTextures,
 		scale = 0.4,
 	}
 
 	model TreeBark
 	{
-		mesh = MADItems|TreeBark,
+		mesh = loggingChucked_ItemModels|TreeBark,
 		texture = loggingChucked_ItemTextures,
 		scale = 0.4,
 	}	
