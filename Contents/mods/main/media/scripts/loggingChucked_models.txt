@@ -1,31 +1,18 @@
 module Base
 {
 /* Items */
-	model AnimalBones
-	{
-		mesh = MAD/MADItems|AnimalBones,
-		texture = MAD/AtomicDuckItems,
-		scale = 0.4,
-	}
 
 	model JarSap
 	{
-		mesh = MAD/MADItems|JarSap,
-		texture = MAD/AtomicDuckItems,
-		scale = 0.4,
-	}
-
-	model LeatherScraps
-	{
-		mesh = MAD/MADItems|LeatherScraps,
-		texture = MAD/AtomicDuckItems,
+		mesh = MADItems|JarSap,
+		texture = loggingChucked_ItemTextures,
 		scale = 0.4,
 	}
 
 	model TreeBark
 	{
-		mesh = MAD/MADItems|TreeBark,
-		texture = MAD/AtomicDuckItems,
+		mesh = MADItems|TreeBark,
+		texture = loggingChucked_ItemTextures,
 		scale = 0.4,
 	}	
 }
