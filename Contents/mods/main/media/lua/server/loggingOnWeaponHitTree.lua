@@ -58,8 +58,17 @@ function loggingOnWeapon.hit(owner, weapon)
         end
 
         if not tree then
-            square:AddWorldInventoryItem("loggingChucked.TreeBark", 0, 0, 0)
-            square:AddWorldInventoryItem("loggingChucked.JarSap", 0, 0, 0)
+
+            local loggingLevel = owner:getPerkLevel(Perks.Logging)
+            local success = 20 + (loggingLevel*2)
+            local drops = {"loggingChucked.TreeBark", "loggingChucked.JarSap"}
+
+            for drop=1, #drops do
+                if ZombRand(100) < success then
+                    square:AddWorldInventoryItem(drops[drop], 0, 0, 0)
+                end
+            end
+
             --if getDebug() then print("no tree found after onTreeHit - assumed felled?") end
         end
         --add extra drops here
